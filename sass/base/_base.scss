@@ -1,0 +1,25 @@
+/* 
+Use universal selector to reset. 
+*/
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+/*
+Define global font size.
+REM changes with this value.
+*/
+html {
+    font-size: 62.5%; // 10/16 = 0.625
+}
+
+/* 
+Define font formatting in the body element
+*/
+body {
+    box-sizing: border-box;
+}
