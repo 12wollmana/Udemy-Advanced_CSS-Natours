@@ -1,3 +1,21 @@
+/*
+Media Query Manager
+-----------------------
+0 - 600px: Phone
+600 - 900px: Tablet Portait
+900 - 1200px: Tablet Landscape
+1200 - 1800px: Normal Desktop
+1800 - Infinity: Large Desktop 
+
+$breakpoint choices
+-------------------
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+1em = 16px
+*/
 /* 
 Use universal selector to reset. 
 */
@@ -13,7 +31,32 @@ Define global font size.
 REM changes with this value.
 */
 html {
+  /*
+    1rem = 10px
+    10px/16px = 0.625
+    */
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      /*
+        1rem = 9px
+        9px/16px = 0.5625
+        */
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      /*
+        1rem = 8px
+        8px/16px = 0.5
+        */
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      /*
+        1rem = 12px
+        12px/16px = 0.75
+        */
+      font-size: 75%; } }
 
 /* 
 Define font formatting in the body element
