@@ -26,15 +26,20 @@
         width: 15rem;
         height: 15rem;
         float: left;
-
-        -webkit-shape-outside: $story__shape-circle;
-        shape-outside: $story__shape-circle;
-        -webkit-clip-path: $story__shape-circle;
-        clip-path: $story__shape-circle;
-
         transform: translateX(-3rem) skewX(12deg);
         overflow: hidden;
         position: relative;
+        border-radius: 50%;
+
+        @supports 
+        (clip-path: polygon(0 0)) or 
+        (-webkit-clip-path: polygon(0 0)){
+            -webkit-shape-outside: $story__shape-circle;
+            shape-outside: $story__shape-circle;
+            -webkit-clip-path: $story__shape-circle;
+            clip-path: $story__shape-circle;
+            border-radius: 0;
+        }
 
         @include respond(phone) {
             transform: translateX(-3rem) skewX(0);
